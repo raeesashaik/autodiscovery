@@ -11,6 +11,7 @@ http://www.mulesoft.org/schema/mule/api-platform-gw http://www.mulesoft.org/sche
     <api-platform-gw:api apiName="testapimanager" version="1.0.0" flowRef="autodiscoveryFlow" create="true" doc:name="API Autodiscovery"/>
     <flow name="autodiscoveryFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/autodiscovery" doc:name="HTTP"/>
+        <logger message="xyzgfa" level="INFO" doc:name="Logger"/>
         <set-payload value="success!!!" doc:name="Set Payload"/>
         <logger message="#[payload]" level="INFO" doc:name="Logger"/>
     </flow>
